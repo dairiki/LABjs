@@ -129,6 +129,7 @@
 			script = document.createElement("script");
 			if (script_obj.type) script.type = script_obj.type;
 			if (script_obj.charset) script.charset = script_obj.charset;
+			if (script_obj.text) script.text = script_obj.text;
 			
 			// should preloading be used for this script?
 			if (preload_this_script) {
@@ -227,6 +228,8 @@
 			script = registry_item.elem || document.createElement("script");
 			if (script_obj.type) script.type = script_obj.type;
 			if (script_obj.charset) script.charset = script_obj.charset;
+			if (script_obj.text) script.text = script_obj.text;
+
 			create_script_load_listener(script,registry_item,"finished",preload_execute_finished);
 			
 			// script elem was real-preloaded
